@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="shazam_dark_gray">#FF404040</color>
+    <color name="shazam_medium_gray">#FF606060</color>
+    <color name="shazam_light_gray">#FFAAAAAA</color>
+    <color name="shazam_blue">#FF1E88E5</color>
+    <color name="green">#FF4CAF50</color>
+    <color name="red">#FFF44336</color>
+    <color name="purple">#FF9C27B0</color>
+    <color name="rid">#661711</color>
+    <color name="blue_dark">#2a4d69</color>
+    <color name="blue_medium">#3a7ca5</color>
+    <color name="purple_dark">#4a2c6d</color>
+    <color name="purple_medium">#5a3d85</color>
+    <color name="green_dark">#2d6a4f</color>
+    <color name="green_medium">#40916c</color>
+    <color name="circle_background_orange">#30d46c43</color>
+
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+            <item name="colorAccent">#FF606060</item>
+            <item name="android:textColorPrimary">#FFFFFF</item>
+            <item name="android:background">#FF404040</item>
+            <item name="android:headerDividersEnabled">false</item>
+            <item name="android:windowMinWidthMajor">75%</item>
+            <item name="android:windowMinWidthMinor">75%</item>
+        </style>
+
+        <style name="CustomDialogTitle" parent="TextAppearance.AppCompat.Title">
+            <item name="android:textColor">#FFFFFF</item>
+            <item name="android:textSize">18sp</item>
+            <item name="android:gravity">center</item>
+        </style>
+
+        <style name="CustomDialogItemText" parent="TextAppearance.AppCompat.Body1">
+            <item name="android:textColor">#FFFFFF</item>
+            <item name="android:textSize">23sp</item>
+        </style>
+
+</resources>

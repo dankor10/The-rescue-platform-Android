@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/shazam_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCids">
+
+
+    <Button
+        android:id="@+id/backButton2222"
+        android:layout_width="125dp"
+        android:layout_height="58dp"
+        android:backgroundTint="@color/shazam_dark_gray"
+        android:text="Назад"
+        android:textColor="@color/white"
+        android:textSize="19dp"
+        android:visibility="visible"
+        app:cornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="256dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="16dp"
+        android:text="Добавить аккаунта ребенка"
+        android:textColor="@color/white"
+        android:textSize="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="392dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Телефон"
+        android:inputType="phone"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Введите номер телефона ребенка"
+        android:textColor="#949494"
+        android:textSize="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="275dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/shazam_dark_gray"
+        android:text="Добавить ребенка"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:visibility="visible"
+        app:cornerRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

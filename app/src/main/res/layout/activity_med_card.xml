@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shazam_background"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Заголовок приложения -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="30dp">
+
+            <!-- Кнопка назад -->
+            <LinearLayout
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/menu_button_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="← Назад"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Заголовок приложения -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOS Помощь"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Кнопка редактирования -->
+            <TextView
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="✏️"
+                android:textSize="20sp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+        <!-- Заголовок страницы -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerLayout"
+            android:layout_centerHorizontal="true"
+            android:text="Медицинская карта"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02" />
+
+        <!-- Основная информация -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/personalInfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleText"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/shazam_dark_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Фото и основная информация -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Аватар -->
+                    <TextView
+                        android:id="@+id/patientAvatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:text="👤"
+                        android:textSize="40sp"
+                        android:background="@drawable/circle_background"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Основные данные -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/patientName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Иван Иванов"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:enabled="false" />
+
+                        <EditText
+                            android:id="@+id/patientAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="35 лет"
+                            android:textColor="@color/shazam_light_gray"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:layout_marginTop="4dp"
+                            android:enabled="false" />
+
+                        <EditText
+                            android:id="@+id/patientBloodType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="A(II) Rh+"
+                            android:textColor="@color/shazam_light_gray"
+                            android:textSize="14sp"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:layout_marginTop="4dp"
+                            android:enabled="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Разделитель -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/shazam_light_gray"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Контактная информация -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Контактная информация"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Телефон:"
+                        android:textColor="@color/shazam_light_gray"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/patientPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+375 44 718 0968"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textAlignment="textEnd"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Эл. почта:"
+                        android:textColor="@color/shazam_light_gray"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/patientEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ivanov@mail.ru"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textAlignment="textEnd"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Медицинская информация -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/medicalInfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personalInfoCard"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/shazam_dark_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Медицинская информация"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Хронические заболевания -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Хронические заболевания:"
+                    android:textColor="@color/shazam_light_gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/chronicDiseases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Гипертония, аллергия на пенициллин"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:enabled="false" />
+
+                <!-- Аллергии -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Аллергии:"
+                    android:textColor="@color/shazam_light_gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/allergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Пенициллин, пыльца"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:enabled="false" />
+
+                <!-- Постоянные лекарства -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Постоянные лекарства:"
+                    android:textColor="@color/shazam_light_gray"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/medications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Лизиноприл 10мг - 1 раз в день"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:layout_marginTop="4dp"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Экстренные контакты -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/emergencyContactsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/medicalInfoCard"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="40dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/shazam_dark_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Экстренные контакты"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Контакт 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="👩"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/contact1Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Мария Иванова"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:enabled="false" />
+
+                        <EditText
+                            android:id="@+id/contact1Phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="+375 123 4567"
+                            android:textColor="@color/shazam_light_gray"
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:enabled="false" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/contact1Relation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Супруга"
+                        android:textColor="@color/shazam_light_gray"
+                        android:textSize="12sp"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+                <!-- Контакт 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="👨"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/contact2Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Петр Иванов"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:enabled="false" />
+
+                        <EditText
+                            android:id="@+id/contact2Phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="+375 44 148 6453"
+                            android:textColor="@color/shazam_light_gray"
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"
+                            android:padding="0dp"
+                            android:enabled="false" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/contact2Relation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Брат"
+                        android:textColor="@color/shazam_light_gray"
+                        android:textSize="12sp"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</ScrollView>
